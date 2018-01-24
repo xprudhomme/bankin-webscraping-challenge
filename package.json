@@ -1,0 +1,29 @@
+{
+  "name": "bankin-webscraping-challenge",
+  "version": "1.0.0",
+  "description": "Bankin' Engineering Challenge #1 - Web scraping, rules here: https://blog.bankin.com/challenge-engineering-web-scrapping-dc5839543117",
+  "main": "bankin-challenge-scraping.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xprudhomme/bankin-webscraping-challenge.git"
+  },
+  "keywords": [
+    "scraping",
+    "bankin",
+    "puppeteer",
+    "headless",
+    "chrome"
+  ],
+  "author": "Xavier Prud'homme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xprudhomme/bankin-webscraping-challenge/issues"
+  },
+  "homepage": "https://github.com/xprudhomme/bankin-webscraping-challenge#readme",
+  "dependencies": {
+    "puppeteer": "^1.0.0"
+  }
+}
