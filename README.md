@@ -12,7 +12,7 @@ Here is a detailed tutorial describing the main steps involved in the Bankin’ 
 If you wish to get the scraping script and test it right now, without going through all this tutorial, simply follow the instructions below. Open a new console and type:
 
     $ cd /tmp
-    $ git clone [https://github.com/xprudhomme/bankin-webscraping-challenge](https://github.com/xprudhomme/bankin-webscraping-challenge.git) & cd bankin-webscraping-challenge
+    $ git clone https://github.com/xprudhomme/bankin-webscraping-challenge & cd bankin-webscraping-challenge
     $ npm i
     $ node bankin-challenge-scraping.js
 
