@@ -345,8 +345,8 @@ async function getTableData(page, pagestatus) {
         //console.log(` Table ${tablesdata.indexOf(table)} data: ${JSON.stringify(table, null, 2)}`);
     }
 
-    // Save whole tables data to JSON file
-    await saveToJSONFile(allrecords, '/tmp/allrecords.json');
+    // Save all the tables data to JSON file. Current timestamp is appended to output file name
+    await saveToJSONFile(allrecords, `output/allrecords_${Date.now()}.json`);
 
     // End log time
     console.timeEnd("fullprocessruntime");
