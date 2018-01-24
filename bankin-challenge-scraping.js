@@ -208,8 +208,11 @@ async function openWithoutError(page, url) {
 
     // Register an 'on dialog' event handler
     page.on('dialog', async dialog => {
-        
-        if(dialog.type==='alert') { // Handle dialog of type alert only
+
+	// Necessary because of Puppeteer API Changes between v0.13.0 and v1.0.0
+	const dialogType = dialog.type instanceof Function? dialog.type() : dialog.type;
+
+        if( dialogType === 'alert') { // Handle dialog of type alert only
 
             console.log(' [openWithoutError.onalert] Got alert message: ' + dialog.message());
 
