@@ -9,11 +9,19 @@ Here is a detailed tutorial describing the main steps involved in the Bankin’ 
 
 ## For those who cannot wait
 
-If you wish to get the scraping script and test it right now, without going through all this tutorial, simply follow the instructions below. Open a new console and type:
+If you want to get and test the scraping script right now, simply follow the instructions below. Please make sure Nodejs v8.x is properly installed on your system beforehand.
+
+First, open a new console and clone this repository to the desired location:
 
     $ cd /tmp
     $ git clone https://github.com/xprudhomme/bankin-webscraping-challenge & cd bankin-webscraping-challenge
+
+Then, install the node modules dependencies:
+
     $ npm i
+    
+Eventually, simply run the node script:
+ 
     $ node bankin-challenge-scraping.js
 
 ## Tools/weapon choice
