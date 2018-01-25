@@ -1,17 +1,17 @@
 
 # Bankin’ Challenge Engineering #1 — Web Scraping script explained
-
 Here is a detailed tutorial describing the main steps involved in the Bankin’ Web Scraping Challenge script development. This tutorial assumes you are already familiar with Nodejs and npm usages.
 
 **Here is the link to the [Medium Article](https://medium.com/@xavier_93068/d6988d207a7)**
 
 ![Bankin' Challenge Engineering #1](./media/1_W12nwWWSW8-NAirwvYgtuA.png)
 
-## For those who cannot wait
+## Immediate usage
+If you want to test the scraping script right now, simply follow the instructions below:
 
-If you want to get and test the scraping script right now, simply follow the instructions below. Please make sure Nodejs v8.x is properly installed on your system beforehand.
+Requirements: make sure Nodejs v8.x is properly installed on your system beforehand.
 
-First, open a new console and clone this repository to the desired location:
+First, open a new console and clone this repository to a desired location:
 
     $ cd /tmp
     $ git clone https://github.com/xprudhomme/bankin-webscraping-challenge & cd bankin-webscraping-challenge
@@ -23,6 +23,26 @@ Then, install the node modules dependencies:
 Eventually, simply run the node script:
  
     $ node bankin-challenge-scraping.js
+
+## Results
+Important note: for some reason, the very first time Puppeteer launches a Chromium instance, right after we have installed it with npm i puppeteer, it takes age to load. Not sure if this is somehow related to node modules caching.
+
+Once the script is launched, the first things you notice are a whole bunch of logs displayed in the console:
+
+![Results logs example screenshot](./media/Selection_124.png)
+
+Don't worry, that's totally normal : ) The script actually tells us which page has been processed, which one has failed and been retried until being loaded correctly. 
+
+We can easily distinguish between three page situations:
+ - No error, the data table is an HTML table located in the page html body
+ - No error, the data table is an HTML table located in an iframe
+ - An error occured: an alert message is displayed, it is dimissed and the page is reloaded
+
+When all pages have been successfully loaded, the tables data is displayed in the console, and logged/saved into a local file located in the output folder. The JSON output file is named after the following convention: allrecords_{currenttimestamp}.json
+
+Eventually, the full process runtime is displayed. It usually takes approximately 7-14 seconds to run upon completion (with currently 100 pages proccessed at a same time).
+
+![Results completed logs example screenshot](./media/Selection_125.png)
 
 ## Tools/weapon choice
 
