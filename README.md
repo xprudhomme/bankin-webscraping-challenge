@@ -33,6 +33,12 @@ Eventually, simply run the node script:
 By default, the script opens up to 100 pages at a time, but you could configure it to handle more if you wanted:
 
     $ node bankin-challenge-scraping.js --pages=200
+    
+ 
+## Tests
+Tests were done on Ubuntu 16.04 with Nodejs v8.9.4, using an Asus Zenbook Pro with this configuration: Intel(R) Core i7-6700HQ CPU @ 2.60GHz Quadricoeur, RAM 16Go DDR4 2133MHz.
+
+I got a process running time average of 10 sec, going from a minimum of 7 sec, to a maximum of 14 sec.
 
 
 ## Some preliminary explanation 
