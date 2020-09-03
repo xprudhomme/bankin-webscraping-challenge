@@ -25,6 +25,6 @@
   "homepage": "https://github.com/xprudhomme/bankin-webscraping-challenge#readme",
   "dependencies": {
     "minimist": "^1.2.0",
-    "puppeteer": "^1.0.0"
+    "puppeteer": "^1.13.0"
   }
 }
